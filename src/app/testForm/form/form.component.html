@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dog Form</title>
+</head>
+<body>
+    <h2>Dog Information Form</h2>
+    <form (ngSubmit)="onSubmit()">
+        <label for="dogName">Dog Name:</label>
+        <input type="text" id="dogName" [(ngModel)] = "formData.dogName" name="dogName" ><br><br>
+        
+        <label for="dogBreed">Dog Breed:</label>
+        <input type="text" id="dogBreed" [(ngModel)] = "formData.dogBreed" name="dogBreed"><br><br>
+        
+        <label for="dogAge">Dog Age:</label>
+        <input type="number" id="dogAge" [(ngModel)] = "formData.dogAge" name="dogAge" min="0"><br><br>
+        
+        <label for="dogSex">Dog Sex:</label>
+        <select id="dogSex" [(ngModel)] = "formData.dogSex" name="dogSex">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br><br>
+        
+        <label for="dogSize">Dog Size:</label>  
+        <select id="dogSize" [(ngModel)] = "formData.dogSize" name="dogSize">
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+        </select><br><br>
+
+
+        <label for="dogImage">Dog Image:</label>
+        <input type="file" id="dogImage" (change)="onFileChange($event)" name="dogImage" accept="image/jpeg"><br><br>
+        
+        <label for="dogDescription">Dog Description:</label>
+        <textarea id="dogDescription" [(ngModel)] = "formData.dogDescription" name="dogDescription"></textarea><br><br>
+        
+        <label for="dogBDay">Dog Birthday:</label>
+        <input type="date" id="dogBDay" [(ngModel)] = "formData.dogBDay" name="dogBDay"><br><br>
+        
+        <button type="Submit">Submit</button>
+    </form>
+
+</body>
+</html>

@@ -337,12 +337,12 @@
     </div>
 
     <!-- DOGS READY TO BE ADOPTED -->
-    <div class="ready-dogs" *ngFor="let dog of dogs">
+    <div class="ready-dogs">
       <div class="header" style="text-align: center;">
         Dogs Ready to Be Adopted
       </div>
-      <div class="dog-buttons content-btns">
-        <div class="button">
+      <div class="dog-buttons content-btns" >
+        <div class="button" *ngFor="let dog of dogs">
           <div class="icon">
             <img src="data:image/jpeg;base64,{{dog.dogImage}}"> 
           </div>
